@@ -1,0 +1,22 @@
+<?php
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2023 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+
+/** @var \M2Commerce\OrderComment\Block\Order\Comment $block */
+?>
+<?php if($comment = $block->getOrderComment()):?>
+    <div class="block block-order-details-view">
+        <div class="block-content">
+            <div class="box box-order-comment">
+                <strong class="box-title"><span><?php echo __('Order Comment') ?></span></strong>
+                <div class="box-content">
+                    <?php echo $block->getOrderCommentHtml();?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

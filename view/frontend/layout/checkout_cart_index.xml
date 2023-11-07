@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2023 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.cart.container">
+            <block name="sales.order.comment" after="-" template="M2Commerce_OrderComment::cart/comment.phtml" ifconfig="order_comments/general/show_in_cart">
+                <arguments>
+                    <argument name="comment_view_model" xsi:type="object">M2Commerce\OrderComment\ViewModel\Comment</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

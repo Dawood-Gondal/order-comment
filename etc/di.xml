@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2023 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="M2Commerce\OrderComment\Api\Data\OrderCommentInterface" type="M2Commerce\OrderComment\Model\Data\OrderComment" />
+    <preference for="M2Commerce\OrderComment\Api\OrderCommentManagementInterface" type="M2Commerce\OrderComment\Model\OrderCommentManagement" />
+    <preference for="M2Commerce\OrderComment\Api\GuestOrderCommentManagementInterface" type="M2Commerce\OrderComment\Model\GuestOrderCommentManagement" />
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="m2commerce_order_comment" xsi:type="string">sales_order.m2commerce_order_comment</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="load.order.comment" type="M2Commerce\OrderComment\Plugin\Model\Order\LoadOrderComment"/>
+    </type>
+</config>
