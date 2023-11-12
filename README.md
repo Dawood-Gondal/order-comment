@@ -8,6 +8,10 @@ Additionally, there is also the option of showing the comment field on the cart 
 
 Store owners can then see these comments in the backend on the order grid and on the order view page.
 
+## Configuration
+
+There are several configuration options for this extension, which can be found at **STORES > Configuration > Commerce Enterprise > Order Comments**.
+
 ### Checkout view
 ![comment box closed](Screenshots/checkout_comment_closed.png)
 
@@ -16,11 +20,6 @@ Store owners can then see these comments in the backend on the order grid and on
 
 ### Admin panel
 ![admin panel](Screenshots/admin_panel.png)
-
-
-## Configuration
-
-There are several configuration options for this extension, which can be found at **STORES > Configuration > Commerce Enterprise > Order Comments**.
 
 ## Installation
 ### Magento® Marketplace

@@ -14,7 +14,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="M2Commerce_OrderComment::orderCommentConfig" title="CE - Order Comment"/>
+                            <resource id="M2Commerce_OrderComment::orderCommentConfig" title="M2C - Order Comment"/>
                         </resource>
                     </resource>
                 </resource>
